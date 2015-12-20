@@ -8,19 +8,13 @@ From DevDad and Dedicated to you and Unreal Community
 Use it free for what ever you want
 I only request that you mention me in the credits for your game in the way that feels most appropriate to you.
 
-SimplexNoise 1D,2D,3D & 4D
+*SimplexNoise 1D,2D,3D & 4D
+*Scaled Version SimplexNoise 1D,2D,3D & 4D
+*InRange version SimplexNoise 1D,2D,3D & 4D
 
-Scaled Version SimplexNoise 1D,2D,3D & 4D
-
-InRange version SimplexNoise 1D,2D,3D & 4D
-
-
-SimplexNoise Function retruns float value between 0 - 1
-
-SimplexNoise Scaled retruns float value between 0 - scale factor 
-
-SimplexNoise In Range returns float value between minRange - maxRange
-
+*SimplexNoise Function retruns float value between 0 - 1
+*SimplexNoise Scaled retruns float value between 0 - scale factor 
+*SimplexNoise In Range returns float value between minRange - maxRange
 
 This algorithm was originally designed by Ken Perlin, but my code has been
 adapted and extended from the implementation written by Stefan Gustavson (stegu@itn.liu.se)
