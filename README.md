@@ -4,8 +4,8 @@
 * If we change float to double it could be even faster but there is no double type in Blueprint
 * All Public Functions are BlueprintCallable so they can be used in every blueprint
 
-From DevDad and Dedicated to you and Unreal Community
-Use it free for what ever you want
+From DevDad and Dedicated to you and Unreal Community.
+Use it free for what ever you want.
 I only request that you mention me in the credits for your game in the way that feels most appropriate to you.
 
 * SimplexNoise 1D,2D,3D & 4D
