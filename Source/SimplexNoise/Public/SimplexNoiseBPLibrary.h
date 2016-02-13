@@ -39,6 +39,9 @@ private:
 public:
 
 	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
+		static void setNoiseSeed(const int32& newSeed);
+
+	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
 		static float SimplexNoise1D(float x);
 
 	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")

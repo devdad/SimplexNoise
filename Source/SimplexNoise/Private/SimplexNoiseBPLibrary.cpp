@@ -61,6 +61,23 @@ unsigned char USimplexNoiseBPLibrary::perm[512] = { 151,160,137,91,90,15,
 138,236,205,93,222,114,67,29,24,72,243,141,128,195,78,66,215,61,156,180
 };
 
+void USimplexNoiseBPLibrary::setNoiseSeed(const int32& newSeed)
+{
+	TArray<bool> availableSeeds;
+	availableSeeds.Init(true, 256);
+	FMath::RandInit(newSeed);
+	for (uint16 it = 0; it < 256;++it)
+	{
+		uint8 nextNum;
+		do 
+		{
+			nextNum = FMath::RandRange(0, 255);
+		} while (!availableSeeds[nextNum]);
+		USimplexNoiseBPLibrary::perm[it] = (unsigned char)nextNum;
+		USimplexNoiseBPLibrary::perm[it+256] = (unsigned char)nextNum;
+	}
+}
+
 static unsigned char simplex[64][4] = {
 	{ 0,1,2,3 },{ 0,1,3,2 },{ 0,0,0,0 },{ 0,2,3,1 },{ 0,0,0,0 },{ 0,0,0,0 },{ 0,0,0,0 },{ 1,2,3,0 },
 	{ 0,2,1,3 },{ 0,0,0,0 },{ 0,3,1,2 },{ 0,3,2,1 },{ 0,0,0,0 },{ 0,0,0,0 },{ 0,0,0,0 },{ 1,3,2,0 },
