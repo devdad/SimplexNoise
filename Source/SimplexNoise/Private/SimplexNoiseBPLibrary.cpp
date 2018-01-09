@@ -20,8 +20,8 @@ I only request that you mention me in the credits for your game in the way that 
 */
 
 
-#include "SimplexNoisePrivatePCH.h"
 #include "SimplexNoiseBPLibrary.h"
+#include "SimplexNoisePrivatePCH.h"
 
 // USimplexNoiseBPLibrary
 #define FASTFLOOR(x) ( ((x)>0) ? ((int)x) : (((int)x)-1) )
