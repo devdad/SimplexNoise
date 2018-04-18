@@ -21,6 +21,7 @@ I only request that you mention me in the credits for your game in the way that 
 
 #pragma once
 
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "SimplexNoiseBPLibrary.generated.h"
 
 
