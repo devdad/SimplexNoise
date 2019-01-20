@@ -4,7 +4,7 @@
 	"FriendlyName" : "Simplex Noise",
 	"Version" : 1,
 	"VersionName" : "1.0.0",
-	"CreatedBy" : "DavDad", 
+	"CreatedBy" : "DevDad", 
 	"CreatedByURL" : "https://art-and-code.com/",
 	"EngineVersion":"4.10",
 	"Description" : "SimplexNoise Blueprint Library to use in Unreal Engine 4",
