@@ -497,13 +497,13 @@ float USimplexNoiseBPLibrary::SimplexNoiseScaled2D(float x, float y, float scale
 
 float USimplexNoiseBPLibrary::SimplexNoiseScaled3D(float x, float y, float z, float scaleOut, float inFactor)
 {
-	return _simplexNoise3D((x * inFactor), (y * inFactor), (z * inFactor));
+	return _simplexNoise3D((x * inFactor), (y * inFactor), (z * inFactor)) * scaleOut;
 }
 
 
 float USimplexNoiseBPLibrary::SimplexNoiseScaled4D(float x, float y, float z, float w, float scaleOut, float inFactor)
 {
-	return _simplexNoise4D(x * inFactor, y * inFactor, z * inFactor, w * inFactor);
+	return _simplexNoise4D(x * inFactor, y * inFactor, z * inFactor, w * inFactor) * scaleOut;
 };
 
 // Return value in Range between two float numbers
