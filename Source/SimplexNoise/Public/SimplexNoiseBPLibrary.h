@@ -46,6 +46,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
 		static void setNoiseSeed(const int32& newSeed);
+    
+    UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
+		void setNoiseFromStream(FRandomStream& RandStream);
 
 	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
 		static float SimplexNoise1D(float x, float inFactor = 1.f);
