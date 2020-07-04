@@ -17,6 +17,10 @@ I only request that you mention me in the credits for your game in the way that 
 * SimplexNoise Scaled retruns float value between 0 - scale factor 
 * SimplexNoise In Range returns float value between minRange - maxRange
 * inFactor value added to all functions to set frequency of the noise [ Recomended values form: 0.1 - 0.00001 ]
+* GetSimpleNoise1D_EX (float x, float lacunarity = 2.3f, float persistance = 0.6f, int octaves = 4, float inFactor = 1.0f, bool ZeroToOne = false)
+* GetSimpleNoise2D_EX (float x, float y, float lacunarity = 2.3f, float persistance = 0.6f, int octaves = 4, float inFactor = 1.0f, bool ZeroToOne = false)
+* GetSimpleNoise3D_EX (float x, float y, float z, float lacunarity = 2.3f, float persistance = 0.6f, int octaves = 4, float inFactor = 1.0f, bool ZeroToOne = false)
+* GetSimpleNoise4D_EX (float x, float y, float z, float w, float lacunarity = 2.3f, float persistance = 0.6f, int octaves = 4, float inFactor = 1.0f, bool ZeroToOne = false)
 
 This algorithm was originally designed by Ken Perlin, but my code has been
 adapted and extended from the implementation written by Stefan Gustavson (stegu@itn.liu.se)
