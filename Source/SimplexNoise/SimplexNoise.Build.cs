@@ -1,5 +1,5 @@
 /*
- SimplexNoise 1.0.0
+ SimplexNoise 1.2.0
  -----
  DevDad - Afan Olovcic @ www.art-and-code.com - 08/12/2015
 */

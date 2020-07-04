@@ -1,5 +1,5 @@
 /*
-SimplexNoise 1.0.0
+SimplexNoise 1.2.0
 -----
 DevDad - Afan Olovcic @ www.art-and-code.com - 08/12/2015
 
@@ -24,23 +24,50 @@ I only request that you mention me in the credits for your game in the way that 
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "SimplexNoiseBPLibrary.generated.h"
 
+	USTRUCT()
+	struct FPoint {
+		GENERATED_BODY()
+		UPROPERTY()
+			float x;
+		UPROPERTY()
+			float y;
+		UPROPERTY()
+			float z;
+	};
 
+
+	USTRUCT()
+	struct FTriangle {
+		GENERATED_BODY()
+		UPROPERTY()
+			FPoint point[3];
+	};
+
+	USTRUCT()
+	struct FCell {
+		GENERATED_BODY()
+		UPROPERTY()
+			FPoint point[8];
+		UPROPERTY()
+			float val[8];
+	};
+		
 UCLASS()
 class SIMPLEXNOISE_API USimplexNoiseBPLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 private:
-
 	static unsigned char perm[];
-	static double  _grad(int hash, double x);
-	static double  _grad(int hash, double x, double y);
-	static double  _grad(int hash, double x, double y, double z);
-	static double  _grad(int hash, double x, double y, double z, double t);
+	static float  _grad(int hash, float x);
+	static float  _grad(int hash, float x, float y);
+	static float  _grad(int hash, float x, float y, float z);
+	static float  _grad(int hash, float x, float y, float z, float t);
 
-	static double _simplexNoise1D(double x);
-	static double _simplexNoise2D(double x, double y);
-	static double _simplexNoise3D(double x, double y, double z);
-	static double _simplexNoise4D(double x, double y, double z, double w);
+	static float _simplexNoise1D(float x);
+	static float _simplexNoise2D(float x, float y);
+	static float _simplexNoise3D(float x, float y, float z);
+	static float _simplexNoise4D(float x, float y, float z, float w);
+	static int	  _polygonise(FCell cell, float isolevel, FTriangle* triangles);
 
 public:
 
@@ -89,6 +116,18 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
 		static float SimplexNoiseInRange4D(float x, float y, float z, float w, float rangeMin, float rangeMax, float inFactor = 1.f);
+
+	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
+		static float GetSimplexNoise1D_EX(float x, float lacunarity = 2.3f, float persistance = 0.6f, int octaves = 4, float inFactor = 1.0f, bool ZeroToOne = false);
+
+	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
+		static float GetSimplexNoise2D_EX(float x, float y, float lacunarity = 2.3f, float persistance = 0.6f, int octaves = 4, float inFactor = 1.0f, bool ZeroToOne = false);
+
+	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
+		static float GetSimplexNoise3D_EX(float x, float y, float z, float lacunarity = 2.3f, float persistance = 0.6f, int octaves = 4, float inFactor = 1.0f, bool ZeroToOne = false);
+
+	UFUNCTION(BlueprintCallable, Category = "SimplexNoise")
+		static float GetSimplexNoise4D_EX(float x, float y, float z, float w, float lacunarity = 2.3f, float persistance = 0.6f, int octaves = 4, float inFactor = 1.0f, bool ZeroToOne = false);
 
 };
 
