@@ -35,15 +35,18 @@ Download Git Bash/Git CMD from https://git-scm.com/download/win for Windows 10.
 
 Open Git CMD
 
-Create the following directories
+Execute these commands
+mkdir %USERPROFILE%\source\repos\ArtAndCodeSuite\SimplexNoise
+mkdir %USERPROFILE%\source\repos\ue5\Engine\Plugins\ArtAndCodeSuite\SimplexNoise
+cd %USERPROFILE%\source\repos\ue5\Engine\Plugins\ArtAndCodeSuite\SimplexNoise
+
+git Clone https://github.com/jimshalo10/SimplexNoise.git
+rem stay in Git-cmd and copy the SimplexNoise.uplugin into UE5 plugins
+rem 
+copy %USERPROFILE%\source\repos\ue5\Engine\Plugins\ArtAndCodeSuite\SimplexNoise
+ SimplexNoise.uplugin %USERPROFILE%\source\repos\ue5\Engine\Plugins\ArtAndCodeSuite\SimplexNoise\SimplexNoise.uplugin
+ 
 
 ```
-mkdir C:\Users\Owner\source\repos\ue5\Engine\Plugins\ArtAndCodeSuite\SimplexNoise
-mkdir C:\Users\Owner\source\repos\ArtAndCodeSuite\SimplexNoise
-cd C:\Users\Owner\source\repos\ArtAndCodeSuite\SimplexNoise
 
-git Clone https://github.com/jimshalo10/SimplexNoise
-
-copy SimplexNoise.uplugin 
-C:\Users\Owner\source\repos\ue5\Engine\Plugins\ArtAndCodeSuite\SimplexNoise
 ```
