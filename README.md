@@ -30,7 +30,9 @@ and modified to fit to Unreal Engine 4
 Unreal Engine 5 (UE5)
 
 This Git Hub Forked Repository has been updated in the SimplexNoise.uplugin for UE5 In the source code to get this built with Visual Studio 2022. 
-You will need to git clone outside the Engine Source build C:\User\Owner\source\repos is the root for UE5 and where "Owner" is your directory. 
+You will need to git clone outside the Engine Source build C:\User\Owner\source\repos is the root for UE5
+
+and where "Owner" is your directory obtined from the Windows 10 system variable %USERPROFILE%
 
 Download Git Bash/Git CMD from https://git-scm.com/download/win for Windows 10.
 
