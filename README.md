@@ -1,6 +1,7 @@
 # SimplexNoise
 
-![SimplexNoise UE4 Plugin Screenshot](http://i.imgur.com/Fpw5mPX.png)
+![SimplexNoise UE5 Plugin Screenshot](Resources/SimpleNoisePicture.png)
+
 
 * This is a clean, fast, modern and free Perlin Simplex noise function.
 * If we change float to double it could be even faster but there is no double type in Blueprint
